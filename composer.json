@@ -1,0 +1,12 @@
+{
+    "name": "jhosein58/nebula",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Nebula\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^8.2"
+    }
+}
