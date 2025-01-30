@@ -2,7 +2,15 @@
 
 require_once "vendor/autoload.php";
 
-use Nebula\Application;
 
+$app = \Nebula\Application::launch();
 
-Application::launch()->withRouting('test.php');
+$app->route->get('/', function () {
+    echo "Hello World!";
+});
+
+$app->route->get('/user/id:{id}-pass:{pass}', function ($id, $pass) {
+    echo "Hello " . $id . ", " . $pass;
+});
+
+$app->start();
